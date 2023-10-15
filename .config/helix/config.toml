@@ -1,0 +1,48 @@
+theme = "base16_transparent"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor]
+line-number="relative"
+bufferline="multiple"
+auto-format=true
+soft-wrap.enable = true
+
+## GLOBAL CLIP START
+# [keys.normal]
+# "y" = "yank_joined_to_clipboard"
+# "Y" = ["extend_to_line_bounds", "yank_joined_to_clipboard"]
+# "p" = "paste_clipboard_after"
+# "R" = ":clipboard-paste-replace" 
+# "d" = "delete_selection"
+# C-s = ":write"
+# "D" = ["extend_to_line_bounds", "delete_selection"]
+## GLOBAL CLIP END
+
+## GLOBAL CLIP START
+# [keys.select]
+# "y" = "yank_joined_to_clipboard"
+# C-s = ":write"
+# "p" = "paste_clipboard_after"
+# "d" = ["yank_joined_to_clipboard","delete_selection"]
+## GLOBAL CLIP END
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "position", "file-type"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[keys.normal]
+C-q = ":q"
+C-s = ":write"
+esc = ["collapse_selection", "keep_primary_selection"]
+[keys.insert]
+C-q = ":q"
+C-s = ":write"
